@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Employee Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- LOGIN -->
+  <div id="login-view" class="login-wrap">
+    <form id="login-form" class="card login-card">
+      <h1>Employee Management</h1>
+      <p class="muted">Admin sign in</p>
+      <label>Username<input id="l-user" required autofocus></label>
+      <label>Password<input id="l-pass" type="password" required></label>
+      <div id="login-err" class="error"></div>
+      <button class="btn primary" type="submit">Login</button>
+    </form>
+  </div>
+
+  <!-- APP -->
+  <div id="app-view" class="app" hidden>
+    <aside>
+      <h2>EMS</h2>
+      <nav>
+        <a data-view="dashboard">Dashboard</a>
+        <a data-view="employees">Employees</a>
+        <a data-view="departments">Departments</a>
+        <a data-view="salaries">Salary Payments</a>
+      </nav>
+      <button class="btn ghost" id="logout">Logout</button>
+    </aside>
+    <main>
+      <div id="toast" class="toast" hidden></div>
+      <div id="view"></div>
+    </main>
+  </div>
+
+  <dialog id="modal"><form id="modal-form" method="dialog"></form></dialog>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
